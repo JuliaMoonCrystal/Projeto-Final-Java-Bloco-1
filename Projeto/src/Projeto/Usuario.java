@@ -102,29 +102,30 @@ public class Usuario {
 	}
 
 
-	public void cadastrarUsuario(ArrayList<Usuario> list) {
-		Usuario u;
-		Scanner leia = new Scanner(System.in);
-		String nome, profi, telefone, idioma, passaporte, paisOrigem;
-		char sexo;
-		
-		System.out.println("Escreva o nome: ");
-		nome = leia.next();
-		System.out.println("Escreva a sua profissão: ");
-		profi = leia.next();
-		System.out.println("Escreva o seu telefone: ");
-		telefone = leia.next();
-		System.out.println("Escreva o seu idioma materno: ");
-		idioma = leia.next();
-		System.out.println("Escreva o numero do passaporte ");
-		passaporte = leia.next();
-		System.out.println("Escreva o nome do seu país de origem: ");
-		paisOrigem = leia.next();
-		System.out.println("Digite o seu sexo (F feminino e M masculino): ");
-		sexo = leia.next().charAt(0);
-		u = new Usuario(nome, profi, telefone, idioma, passaporte, paisOrigem, sexo);		
-		list.add(u);
-	}
+//	public Usuario cadastrarUsuario(ArrayList<Usuario> list) {
+//		Usuario u;
+//		Scanner leia = new Scanner(System.in);
+//		String nome, profi, telefone, idioma, passaporte, paisOrigem;
+//		char sexo;
+//		
+//		System.out.println("Escreva o nome: ");
+//		nome = leia.next();
+//		System.out.println("Escreva a sua profissão: ");
+//		profi = leia.next();
+//		System.out.println("Escreva o seu telefone: ");
+//		telefone = leia.next();
+//		System.out.println("Escreva o seu idioma materno: ");
+//		idioma = leia.next();
+//		System.out.println("Escreva o numero do passaporte ");
+//		passaporte = leia.next();
+//		System.out.println("Escreva o nome do seu país de origem: ");
+//		paisOrigem = leia.next();
+//		System.out.println("Digite o seu sexo (F feminino e M masculino): ");
+//		sexo = leia.next().charAt(0);
+//		u = new Usuario(nome, profi, telefone, idioma, passaporte, paisOrigem, sexo);		
+//		list.add(u);
+//		return u;
+//	}
 	
 	public void atualizarUsuario(ArrayList<Usuario> list) {
 		int indice, op;			
@@ -145,32 +146,39 @@ public class Usuario {
 			System.out.println("Digite o novo nome: ");
 			String novoNome = leia.next();
 			list.get(indice).setNome(novoNome);
+			break;
 		case 2:
 			System.out.println("Digite a nova Profissão: ");
 			String novaProfi = leia.next();
-			list.get(indice).setProfissão(novaProfi);			
+			list.get(indice).setProfissão(novaProfi);
+			break;
 		case 3:
 			System.out.println("Digite o novo Telefone: ");
 			String novoTel = leia.next();
 			list.get(indice).setTelefone(novoTel);
+			break;
 		case 4:
 			System.out.println("Digite o novo Idioma: ");
 			String novoIdioma = leia.next();
-			list.get(indice).setIdioma(novoIdioma);		
+			list.get(indice).setIdioma(novoIdioma);
+			break;
 		case 5:
 			System.out.println("Digite o novo Passaporte: ");
 			String novoPass = leia.next();		
 			list.get(indice).setPassaporte(novoPass);
+			break;
 		case 6:
 			System.out.println("Digite o novo país de origem: ");
 			String novoPais = leia.next();
-			list.get(indice).setPaisOrigem(novoPais);			
+			list.get(indice).setPaisOrigem(novoPais);
+			break;
 		case 7:
 			System.out.println("Digite o novo sexo: ");
 			char novoSexo = leia.next().charAt(0);		
 			list.get(indice).setSexo(novoSexo);
+			break;
 		default:
-			System.out.println("Opção Inválida!");
+			System.out.println("Opção Inválida!");			
 		}
 	}
 	
@@ -196,7 +204,7 @@ public class Usuario {
 	
 	public void imprimirLista (ArrayList<Usuario> list) {
 		for(int i = 0; i < list.size();i++) {
-			System.out.println("Indice: "+i 
+			System.out.println("Indice: "+i +" | " 
 					+" Nome: "+list.get(i).getNome()
 					+" Profissão: "+list.get(i).getProfissão()
 					+" Telefone: "+list.get(i).getTelefone()
