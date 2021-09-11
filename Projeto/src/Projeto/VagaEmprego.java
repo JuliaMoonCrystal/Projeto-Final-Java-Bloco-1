@@ -49,6 +49,30 @@ public class VagaEmprego extends Vaga{
 		return Objects.equals(regimeContratacao, other.regimeContratacao)
 				&& Double.doubleToLongBits(salario) == Double.doubleToLongBits(other.salario);
 	}
+
+	@Override
+	public void ataualizarVaga(Object vaga) {
+		
+		
+	}
+	
+    public void AdicionarVagas() {//deixei void mas quando formos testar vai ter retorno
+		
+	}
+	
+	public void ExcluirVaga() {
+		
+	}
+	
+	public void pesquisarVagas() {
+		
+	}
+
+	@Override
+	public void imprimirVaga(Object vaga) {
+		
+		
+	}
 	
 	
 }

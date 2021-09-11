@@ -3,9 +3,7 @@ package Projeto;
 import java.util.Objects;
 
 public class Usuario {
-<<<<<<< HEAD
-   
-=======
+
 	private String nome;
 	private String profissão;
 	private String telefone;
@@ -101,7 +99,5 @@ public class Usuario {
 				&& Objects.equals(telefone, other.telefone);
 	}
 	
-	
 
->>>>>>> main
 }
