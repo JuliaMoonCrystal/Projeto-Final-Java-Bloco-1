@@ -77,7 +77,7 @@ public class VagaCurso extends Vaga{
 
 	@Override
 	public void imprimirVaga(Object vaga) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
