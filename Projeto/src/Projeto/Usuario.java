@@ -5,6 +5,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Usuario {
+
 	private String nome;
 	private String profissão;
 	private String telefone;
@@ -99,7 +100,8 @@ public class Usuario {
 				&& Objects.equals(profissão, other.profissão) && sexo == other.sexo
 				&& Objects.equals(telefone, other.telefone);
 	}
-	
+
+
 	public void cadastrarUsuario(ArrayList<Usuario> list) {
 		Usuario u;
 		Scanner leia = new Scanner(System.in);

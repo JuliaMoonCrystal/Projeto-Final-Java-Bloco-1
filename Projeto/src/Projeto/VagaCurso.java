@@ -69,6 +69,29 @@ public class VagaCurso extends Vaga{
 		return Objects.equals(campus, other.campus) && Objects.equals(duracao, other.duracao)
 				&& Objects.equals(regimeMatricula, other.regimeMatricula) && Objects.equals(turno, other.turno);
 	}
+
+	@Override
+	public void ataualizarVaga(Object vaga) {
+		
+	}
+
+	@Override
+	public void imprimirVaga(Object vaga) {
+		
+		
+	}
+	
+	public void AdicionarVagas() {//deixei void mas quando formos testar vai ter retorno
+		
+	}
+	
+	public void ExcluirVaga() {
+		
+	}
+	
+	public void pesquisarVagas() {
+		
+	}
 	
 	
 	
