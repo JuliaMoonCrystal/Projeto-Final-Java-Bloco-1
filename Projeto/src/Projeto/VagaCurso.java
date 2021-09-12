@@ -17,6 +17,10 @@ public class VagaCurso extends Vaga{
 		this.turno = turno;
 	}
 
+	public VagaCurso() {
+		super();
+	}
+
 	public String getRegimeMatricula() {
 		return regimeMatricula;
 	}
@@ -70,12 +74,12 @@ public class VagaCurso extends Vaga{
 				&& Objects.equals(regimeMatricula, other.regimeMatricula) && Objects.equals(turno, other.turno);
 	}
 
-	@Override
-	public void ataualizarVaga(Object vaga) {
+	//@Override
+	public void atualizarVaga(Object vaga) {
 		
 	}
 
-	@Override
+	//@Override
 	public void imprimirVaga(Object vaga) {
 		
 		

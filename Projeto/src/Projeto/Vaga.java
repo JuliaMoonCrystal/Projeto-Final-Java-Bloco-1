@@ -7,8 +7,8 @@ public abstract class Vaga {
 	private String local;
 	private String nomeVaga;
 	private String nomeEmpresa;
-	public abstract void ataualizarVaga(Object vaga);
-	public abstract void imprimirVaga(Object vaga);
+	//public abstract void atualizarVaga(Object vaga);
+	//public abstract void imprimirVaga(Object vaga);
 	
 	public Vaga(String nívelEscolaridade, String local, String nomeVaga, String nomeEmpresa) {
 		this.nívelEscolaridade = nívelEscolaridade;
@@ -16,7 +16,11 @@ public abstract class Vaga {
 		this.nomeVaga = nomeVaga;
 		this.nomeEmpresa = nomeEmpresa;
 	}
-
+	
+	public Vaga() {
+		
+	}
+	
 	public String getNívelEscolaridade() {
 		return nívelEscolaridade;
 	}

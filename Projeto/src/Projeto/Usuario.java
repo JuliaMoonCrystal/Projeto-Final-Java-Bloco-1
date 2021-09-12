@@ -24,7 +24,11 @@ public class Usuario {
 		this.paisOrigem = paisOrigem;
 		this.sexo = sexo;
 	}
-
+	
+	public Usuario() {
+		
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -100,32 +104,37 @@ public class Usuario {
 				&& Objects.equals(profissão, other.profissão) && sexo == other.sexo
 				&& Objects.equals(telefone, other.telefone);
 	}
-
-
-//	public Usuario cadastrarUsuario(ArrayList<Usuario> list) {
-//		Usuario u;
-//		Scanner leia = new Scanner(System.in);
-//		String nome, profi, telefone, idioma, passaporte, paisOrigem;
-//		char sexo;
-//		
-//		System.out.println("Escreva o nome: ");
-//		nome = leia.next();
-//		System.out.println("Escreva a sua profissão: ");
-//		profi = leia.next();
-//		System.out.println("Escreva o seu telefone: ");
-//		telefone = leia.next();
-//		System.out.println("Escreva o seu idioma materno: ");
-//		idioma = leia.next();
-//		System.out.println("Escreva o numero do passaporte ");
-//		passaporte = leia.next();
-//		System.out.println("Escreva o nome do seu país de origem: ");
-//		paisOrigem = leia.next();
-//		System.out.println("Digite o seu sexo (F feminino e M masculino): ");
-//		sexo = leia.next().charAt(0);
-//		u = new Usuario(nome, profi, telefone, idioma, passaporte, paisOrigem, sexo);		
-//		list.add(u);
-//		return u;
-//	}
+	
+	public Object Adicionar(Object cliente) {
+		Scanner scan = new Scanner(System.in);//Scanner para pegar os dados de usuário
+		
+		System.out.println("\nCadastro de novo usuário");
+		System.out.println("\nDigite o seu nome : ");
+		nome= scan.nextLine();
+		
+		System.out.println("\nDigite a sua profissão : ");
+		profissão= scan.nextLine();
+		
+		System.out.println("\nDigite o seu telefone : ");
+		telefone= scan.nextLine();
+		
+		System.out.println("\nDigite o número do seu passaporte : ");
+		passaporte= scan.nextLine();
+		
+		System.out.println("\nDigite o seu Pais de Origem : ");
+		paisOrigem= scan.nextLine();
+		
+		System.out.println("\nDigite o seu Genêro: ");//depois podemos fazer uma verificação aqui
+		sexo= scan.next().charAt(0);
+		
+		return cliente;
+		
+	}
+	
+	public void Imprimir() {
+		System.out.println("\nNome : "+nome+ "\nProfissão : "+profissão+"\nTelefone : "+telefone+"\nPassaporte : "+passaporte
+				+"\nPais de Origem : "+paisOrigem+"\nGenêro : "+sexo);
+	}
 	
 	public void atualizarUsuario(ArrayList<Usuario> list) {
 		int indice, op;			
@@ -202,7 +211,7 @@ public class Usuario {
 		}
 	}
 	
-	public void imprimirLista (ArrayList<Usuario> list) {
+	public void imprimirListaUsuario (ArrayList<Usuario> list) {
 		for(int i = 0; i < list.size();i++) {
 			System.out.println("Indice: "+i +" | " 
 					+" Nome: "+list.get(i).getNome()
