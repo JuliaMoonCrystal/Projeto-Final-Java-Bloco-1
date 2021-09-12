@@ -1,6 +1,7 @@
 package Projeto;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Usuario {
 
@@ -12,8 +13,7 @@ public class Usuario {
 	private String paisOrigem;
 	private char sexo;
 	
-	public Usuario(String nome, String profissão, String telefone, String idioma, String passaporte, String paisOrigem,
-			char sexo) {
+	public Usuario() {
 		this.nome = nome;
 		this.profissão = profissão;
 		this.telefone = telefone;
@@ -98,6 +98,38 @@ public class Usuario {
 				&& Objects.equals(profissão, other.profissão) && sexo == other.sexo
 				&& Objects.equals(telefone, other.telefone);
 	}
+	
+	public Object Adicionar(Object cliente) {
+		Scanner scan = new Scanner(System.in);//Scanner para pegar os dados de usuário
+		
+		System.out.println("\nCadastro de novo usuário");
+		System.out.println("\nDigite o seu nome : ");
+		nome= scan.nextLine();
+		
+		System.out.println("\nDigite a sua profissão : ");
+		profissão= scan.nextLine();
+		
+		System.out.println("\nDigite o seu telefone : ");
+		telefone= scan.nextLine();
+		
+		System.out.println("\nDigite o número do seu passaporte : ");
+		passaporte= scan.nextLine();
+		
+		System.out.println("\nDigite o seu Pais de Origem : ");
+		paisOrigem= scan.nextLine();
+		
+		System.out.println("\nDigite o seu Genêro: ");//depois podemos fazer uma verificação aqui
+		sexo= scan.next().charAt(0);
+		
+		return cliente;
+		
+	}
+	
+	public void Imprimir() {
+		System.out.println("\nNome : "+nome+ "\nProfissão : "+profissão+"\nTelefone : "+telefone+"\nPassaporte : "+passaporte
+				+"\nPais de Origem : "+paisOrigem+"\nGenêro : "+sexo);
+	}
+	
 	
 
 }
