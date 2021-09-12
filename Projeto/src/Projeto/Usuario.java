@@ -137,6 +137,7 @@ public class Usuario {
 	}
 	
 	public void atualizarUsuario(ArrayList<Usuario> list) {
+		imprimirListaUsuario(list);
 		int indice, op;			
 		Scanner leia = new Scanner(System.in);
 		System.out.println("Digite o indice do usuario a ser atualizado: ");

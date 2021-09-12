@@ -56,8 +56,8 @@ public class VagaEmprego extends Vaga{
 				&& Double.doubleToLongBits(salario) == Double.doubleToLongBits(other.salario);
 	}
 
-	//@Override
-	public void atualizarVaga(VagaEmprego vaga) {
+	@Override
+	public void atualizarVaga() {
 		Scanner leia = new Scanner(System.in);
 		String str;
 		double salario;
@@ -74,32 +74,32 @@ public class VagaEmprego extends Vaga{
 		case 1:
 			System.out.println("Digite o novo Nivel de Escolaridade");
 			str = leia.next();
-			vaga.setNívelEscolaridade(str);
+			setNívelEscolaridade(str);
 			break;
 		case 2:
 			System.out.println("Digite o novo local");
 			str = leia.next();
-			vaga.setLocal(str);
+			setLocal(str);
 			break;
 		case 3:
 			System.out.println("Digite o novo nome da vaga");
 			str = leia.next();
-			vaga.setNomeVaga(str);
+			setNomeVaga(str);
 			break;
 		case 4:
 			System.out.println("Digite o novo nome da empresa");
 			str = leia.next();
-			vaga.setNomeEmpresa(str);
+			setNomeEmpresa(str);
 			break;
 		case 5:
 			System.out.println("Digite o novo salário");
 			salario = leia.nextDouble();
-			vaga.setSalario(salario);
+			setSalario(salario);
 			break;
 		case 6:
 			System.out.println("Digite o novo Regime de Contratação");
 			str = leia.next();
-			vaga.setRegimeContratacao(str);
+			setRegimeContratacao(str);
 			break;
 		default:
 			System.out.println("Opção Inválida!");
@@ -107,7 +107,7 @@ public class VagaEmprego extends Vaga{
 		}		
 	}
 	
-    public VagaEmprego AdicionarVagas(ArrayList<VagaEmprego> list) {//deixei void mas quando formos testar vai ter retorno
+    public VagaEmprego AdicionarVagas(ArrayList<VagaEmprego> list) {
     	//Nesse método ele cria a vaga e adiciona na lista
     	VagaEmprego vaga;
     	String nívelEscolaridade, local, nomeVaga, nomeEmpresa, regime;
@@ -150,16 +150,16 @@ public class VagaEmprego extends Vaga{
 	public void pesquisarVagas(ArrayList<VagaEmprego> list) {
 		for(int i = 0; i < list.size(); i++) {
 			System.out.println("Indice: "+i +" | " 
-					+"Vaga: "+list.get(i).getNomeVaga()
-					+" Empresa: "+list.get(i).getNomeEmpresa()
-					+" Local: "+list.get(i).getLocal()
-					+" Nivel de Escolaridade: "+list.get(i).getNívelEscolaridade()
-					+" Regime de Contratação: "+list.get(i).getRegimeContratacao()
+					+"Vaga: "+list.get(i).getNomeVaga()+ "-"
+					+" Empresa: "+list.get(i).getNomeEmpresa()+ "-"
+					+" Local: "+list.get(i).getLocal()+ "-"
+					+" Nivel de Escolaridade: "+list.get(i).getNívelEscolaridade()+ "-"
+					+" Regime de Contratação: "+list.get(i).getRegimeContratacao()+ "-"
 					+" Salario: "+list.get(i).getSalario());
 		}
 	}
 
-	//@Override
+	@Override
 	public void imprimirVaga() {
 		System.out.println("\nNome da Vaga: "+getNomeVaga()+ "\nEmpresa : "+getNomeEmpresa()+"\nLocal : "+getLocal()+"\nNível de Escolaridade : "+getNívelEscolaridade()
 				+"\nRegime de Contratação : "+getRegimeContratacao()+"\nSalario : "+getSalario());				
