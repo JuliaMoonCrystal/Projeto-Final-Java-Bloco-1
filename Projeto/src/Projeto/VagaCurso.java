@@ -127,10 +127,12 @@ public class VagaCurso extends Vaga{
 			System.out.println("Digite o novo campus: ");
 			str = leia.next();
 			setCampus(str);
+			break;
 		case 8:
 			System.out.println("Digite o novo turno: ");
 			str = leia.next();
 			setTurno(str);
+			break;
 		default:
 			System.out.println("Opção Inválida!");
 			break;
