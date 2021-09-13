@@ -189,7 +189,44 @@ public class VagaCurso extends Vaga{
 		}
 	}
 	
-	public void pesquisarVagas(ArrayList<VagaCurso> list) {
+	public String pesquisarVagas(ArrayList<VagaCurso> list) {
+		Scanner leia = new Scanner(System.in);
+		String pesquisaVaga;
+		String vagaEncontrada = null;
+		String vagaNaoEncontrada = null;
+		String msg = "";
+		System.out.println("Digite o nome do curso desejado: ");
+		pesquisaVaga = leia.nextLine();
+		System.out.println();
+		for(int i = 0; i < list.size(); i++) {			
+			if(list.get(i).getNomeVaga().equalsIgnoreCase(pesquisaVaga)) {
+				System.out.println("\tResultado da Pesquisa");
+				vagaEncontrada =  "Indice: "+i +" | " 
+						+"Vaga: "+list.get(i).getNomeVaga() + "-"
+						+" Empresa: "+list.get(i).getNomeEmpresa()+ "-"
+						+" Local: "+list.get(i).getLocal()+ "-"
+						+" Nivel de Escolaridade: "+list.get(i).getNívelEscolaridade()+ "-"
+						+" Regime de Matrícula: "+list.get(i).getRegimeMatricula()+ "-"
+						+" Duração: "+list.get(i).getDuracao()+ "-"
+						+" Campus: "+list.get(i).getCampus()+ "-"
+						+" Turno: "+list.get(i).getTurno();			
+				
+			}
+			else{
+				vagaNaoEncontrada = "Vaga Não Encontrada";
+			}
+			
+			if(vagaEncontrada != null) {
+				msg = vagaEncontrada;
+			}else {
+				msg = vagaNaoEncontrada;
+			}
+	  }
+		return msg;
+		
+	}
+	
+	public void listarCursos(ArrayList<VagaCurso> list) {
 		for(int i = 0; i < list.size(); i++) {
 			System.out.println("Indice: "+i +" | " 
 					+"Vaga: "+list.get(i).getNomeVaga() + "-"
@@ -202,6 +239,7 @@ public class VagaCurso extends Vaga{
 					+" Turno: "+list.get(i).getTurno());
 		}
 		}
+	
 	}
 	
 

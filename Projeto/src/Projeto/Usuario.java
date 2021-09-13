@@ -199,6 +199,7 @@ public class Usuario {
 	}
 	
 	public void consultarUsuario(ArrayList<Usuario> list) {
+		imprimirListaUsuario(list);
 		Scanner leia = new Scanner(System.in);
 		int indice;
 		
