@@ -122,7 +122,7 @@ public class VagaEmprego extends Vaga{
 		local = leia.nextLine();
 		System.out.println("\nEscreva o Nível de Escolaridade: ");
 		nívelEscolaridade = leia.nextLine();
-		System.out.println("\nEscreva o regime de contratação ");
+		System.out.println("\nEscreva o regime de contratação: ");
 		regime = leia.nextLine();
 		System.out.println("\nEscreva o salário: ");
 		salario = leia.nextDouble();
@@ -157,6 +157,10 @@ public class VagaEmprego extends Vaga{
 					+" Regime de Contratação: "+list.get(i).getRegimeContratacao()+ "-"
 					+" Salario: "+list.get(i).getSalario());
 		}
+		
+		
+		
+		
 	}
 
 	@Override
