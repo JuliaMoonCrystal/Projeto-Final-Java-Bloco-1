@@ -107,7 +107,8 @@ public class Usuario {
 	
 	public Object Adicionar(Object cliente) {
 		Scanner scan = new Scanner(System.in);//Scanner para pegar os dados de usuário
-		
+	    	
+	  
 		System.out.println("\nCadastro de novo usuário");
 		System.out.println("\nDigite o seu nome : ");
 		nome= scan.nextLine();
@@ -127,13 +128,18 @@ public class Usuario {
 		System.out.println("\nDigite o seu Genêro: ");//depois podemos fazer uma verificação aqui
 		sexo= scan.next().charAt(0);
 		
-		return cliente;
+		System.out.println("\nDigite seu idioma:");
+		idioma = scan.nextLine();
 		
+		return cliente;
+	    
+	    
+	   
 	}
 	
 	public void Imprimir() {
 		System.out.println("\nNome : "+nome+ "\nProfissão : "+profissão+"\nTelefone : "+telefone+"\nPassaporte : "+passaporte
-				+"\nPais de Origem : "+paisOrigem+"\nGenêro : "+sexo);
+				+"\nPais de Origem : "+paisOrigem+"\nGenêro : "+sexo+"\nIdioma");
 	}
 	
 	public void atualizarUsuario(ArrayList<Usuario> list) {
