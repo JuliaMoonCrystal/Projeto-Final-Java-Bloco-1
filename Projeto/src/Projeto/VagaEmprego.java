@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class VagaEmprego extends Vaga{
+public class VagaEmprego extends Vaga{ // Herança. Herda da classe Vaga
 	private double salario;
 	private String regimeContratacao;
 	
 	public VagaEmprego(String nívelEscolaridade, String local, String nomeVaga, String nomeEmpresa,
-			double salario, String regimeContratacao) {
+			double salario, String regimeContratacao) { //Construtor com parametros
 		super(nívelEscolaridade, local, nomeVaga, nomeEmpresa);
 		this.salario = salario;
 		this.regimeContratacao = regimeContratacao;
 	}
 
-	public VagaEmprego() {
+	public VagaEmprego() { //Construtor sem parametro
 		super();
 	}
 
@@ -133,7 +133,7 @@ public class VagaEmprego extends Vaga{
 	}
 	
 	public void ExcluirVaga(ArrayList<VagaEmprego> list) {
-		pesquisarVagas(list);
+		listarVagasEmprego(list);
 		Scanner leia = new Scanner(System.in);
 		int indice;
 		System.out.println("Digite o indice da vaga que deseja excluir");
@@ -147,7 +147,7 @@ public class VagaEmprego extends Vaga{
 		
 	}
 	
-	public String pesquisarVagas(ArrayList<VagaEmprego> list) {
+	public String pesquisarVagas(ArrayList<VagaEmprego> list) {//Retorna uma string
 		Scanner leia = new Scanner(System.in);
 		String pesquisaVaga;
 		String vagaEncontrada = null;

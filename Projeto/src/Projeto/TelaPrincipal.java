@@ -59,7 +59,7 @@ public class TelaPrincipal {
 							+ "\n 13 - Imprimir lista de curso;" + "\n 14 - Finalizar programa;"));
 
 			switch (opcao) {
-			case 1:// Tentar adcionar mais de um cliente por vez.
+			case 1:
 				Usuario novoCliente = new Usuario();
 				novoCliente.Adicionar(novoCliente);
 				listaCliente.add(novoCliente);
@@ -93,6 +93,8 @@ public class TelaPrincipal {
 
 			case 8:
 				vaga.listarVagasEmprego(listaVagaEmprego);
+				ind = Integer.parseInt(JOptionPane.showInputDialog(null, "\nEscreva o indice da vaga: "));
+				listaVagaEmprego.get(ind).imprimirVaga();
 				break;
 
 			case 9:
@@ -113,8 +115,10 @@ public class TelaPrincipal {
 				curso.ExcluirVaga(listaCurso);
 				break;
 
-			case 13:
-				curso.listarCursos(listaCurso);				
+			case 13:				
+				curso.listarCursos(listaCurso);
+				ind = Integer.parseInt(JOptionPane.showInputDialog(null, "\nEscreva o indice do curso: "));
+				listaCurso.get(ind).imprimirVaga();
 				break;
 
 			case 14:
@@ -130,4 +134,3 @@ public class TelaPrincipal {
 		}
 
 	}
-

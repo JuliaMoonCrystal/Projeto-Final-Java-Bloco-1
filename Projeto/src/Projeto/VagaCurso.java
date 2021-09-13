@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class VagaCurso extends Vaga{
+public class VagaCurso extends Vaga{// Herança. Herda da classe Vaga
 	private String regimeMatricula;
 	private String duracao;
 	private String campus;
 	private String turno;
-	
+	//Coonstrutor com parametro
 	public VagaCurso(String nívelEscolaridade, String local, String nomeVaga, String nomeEmpresa, String regimeMatricula, 
 			String duracao, String campus, String turno) {
 		super(nívelEscolaridade, local, nomeVaga, nomeEmpresa);
@@ -18,7 +18,7 @@ public class VagaCurso extends Vaga{
 		this.campus = campus;
 		this.turno = turno;
 	}
-
+	//Construtor sem parametro
 	public VagaCurso() {
 		super();
 	}
@@ -77,7 +77,7 @@ public class VagaCurso extends Vaga{
 	}
 
 	@Override
-	public void atualizarVaga() {
+	public void atualizarVaga() {//Método que a classe mãe exige implementar
 		Scanner leia = new Scanner(System.in);
 		String str;
 		double salario;
@@ -140,7 +140,7 @@ public class VagaCurso extends Vaga{
 	}
 
 	@Override
-	public void imprimirVaga() {
+	public void imprimirVaga() {//Método que a classe mãe exige implementar
 		System.out.println("\nNome da Vaga: "+getNomeVaga()+ "\nEmpresa : "+getNomeEmpresa()+"\nLocal : "+getLocal()+"\nNível de Escolaridade : "+getNívelEscolaridade()
 		+"\nRegime de Mátricula : "+getRegimeMatricula()+"\nDuração : "+getDuracao()
 		+"\nCampus : "+getCampus()
@@ -176,13 +176,13 @@ public class VagaCurso extends Vaga{
 	}
 	
 	public void ExcluirVaga(ArrayList<VagaCurso> list) {
-		pesquisarVagas(list);
+		listarCursos(list);
 		Scanner leia = new Scanner(System.in);
 		int indice;
 		System.out.println("Digite o indice da vaga que deseja excluir");
 		indice = leia.nextInt();
 		if(indice <= list.size()) {
-			list.remove(indice);
+			list.remove(indice);			
 			System.out.println("Vaga Removida");
 		}else {
 			System.out.println("Indice não existe");
