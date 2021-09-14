@@ -53,12 +53,12 @@ public class TelaPrincipal {
 
 		do {
 			opcao = Integer.parseInt(JOptionPane.showInputDialog(null,
-					"\n 1 - Adicionar usuário;" + "\n 2 - Atualizar usuário;" + "\n 3 - Consultar usuário;"
-							+ "\n 4 - Adicionar vagas;" + "\n 5 - Pesquisar vagas;" + "\n 6 - Excluir vagas;"
-							+ "\n 7 - Atualizar vagas;" + "\n 8 - Imprimir lista de vagas de emprego;"
-							+ "\n 9 - Adcionar vagas de cursos;" + "\n 10 - Atualizar vagas de cursos;"
-							+ "\n 11 - Pesquisar vagas de curso;" + "\n 12 - Excluir vagas de curso;"
-							+ "\n 13 - Imprimir lista de curso;" + "\n 14 - Finalizar programa;"));
+					"\n 1 - Adicionar usuário;\n" + "\n 2 - Atualizar usuário;\n" + "\n 3 - Consultar usuário;\n"
+							+ "\n 4 - Adicionar vagas;\n" + "\n 5 - Pesquisar vagas;\n" + "\n 6 - Excluir vagas\n;"
+							+ "\n 7 - Atualizar vagas;\n" + "\n 8 - Imprimir lista de vagas de emprego;\n"
+							+ "\n 9 - Adicionar vagas de cursos;\n" + "\n 10 - Atualizar vagas de cursos;\n"
+							+ "\n 11 - Pesquisar vagas de curso;\n" + "\n 12 - Excluir vagas de curso;\n"
+							+ "\n 13 - Imprimir lista de curso;\n" + "\n 14 - Finalizar programa;\n"));
 
 			switch (opcao) {
 			case 1:
