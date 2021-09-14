@@ -26,6 +26,7 @@ public class TelaPrincipal {
 		listaVagaEmprego.add(v3);
 		listaVagaEmprego.add(v4);
 		listaVagaEmprego.add(v5);
+		
 		//Populando listaCurso
 		VagaCurso c1 = new VagaCurso("Ensino Médio", "Rio de Janeiro", "Confeitaria", "Senac", "Anual", "2 anos", "Ipanema", "Noturno");
 		VagaCurso c2 = new VagaCurso("Ensino Superior", "São Paulo", "Administração", "PUC-SP", "Semestral", "8 semestres", "Perdizes", "Noturno");
@@ -37,6 +38,7 @@ public class TelaPrincipal {
 		listaCurso.add(c3);
 		listaCurso.add(c4);
 		listaCurso.add(c5);
+		
 		//Populando listaCliente
 		Usuario u1 = new Usuario("Áurea Brito Arruda", "Auxiliar de Produção", "(76) 38995-3387", "Espanhol", "900.728.650-16", "Equador", 'F');
 		Usuario u2 = new Usuario("Kévin Campelo Regueira", "Pintor", "(19) 54224-1403", "Francês", "127.177.510-76", "Haiti", 'M');
