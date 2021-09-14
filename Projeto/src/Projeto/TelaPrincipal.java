@@ -1,7 +1,12 @@
 package Projeto;
 
-<<<<<<< HEAD
+
 import java.util.Scanner;
+import java.awt.Cursor;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class TelaPrincipal {
 
@@ -11,24 +16,7 @@ public class TelaPrincipal {
 		
 		cliente.Adicionar(cliente);
 		cliente.Imprimir();
-		
-		
-		
-		
-		
-		
-	}
-=======
-import java.awt.Cursor;
-import java.util.ArrayList;
-import java.util.Scanner;
 
-import javax.swing.JOptionPane;
-
-
-public class TelaPrincipal {
-
-	public static void main(String[] args) {
 		ArrayList<Usuario> listaCliente = new ArrayList<>();
 		ArrayList<VagaEmprego> listaVagaEmprego = new ArrayList<>();
 		ArrayList<VagaCurso> listaCurso = new ArrayList<>();
@@ -66,7 +54,7 @@ public class TelaPrincipal {
 		listaCliente.add(u2);
 		listaCliente.add(u3);
 		
-		Usuario cliente = new Usuario();
+		
 		VagaEmprego vaga = new VagaEmprego();
 		VagaCurso curso = new VagaCurso();
 
@@ -150,9 +138,9 @@ public class TelaPrincipal {
 		JOptionPane.showMessageDialog(null, "opção inválida");
 		break;
 			}
-			} while (opcao != 14);
+		  } while (opcao != 14);
 
 		}
->>>>>>> main
+
 
 	}
